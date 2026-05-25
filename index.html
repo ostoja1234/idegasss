@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nikola Ostojić</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+body{
+background: linear-gradient(to bottom, #F8FAFC, #2563EB);
+color:white;
+padding:30px;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+}
+
+.hero{
+text-align:center;
+margin-top:40px;
+}
+
+.hero h1{
+font-size:75px;
+color:#60A5FA;
+font-weight:bold;
+}
+
+.hero p{
+font-size:30px;
+margin-top:20px;
+color:#608ef0;
+}
+
+.profile-img{
+width:100%;
+max-width:700px;
+border-radius:30px;
+border:5px solid #60A5FA;
+margin-top:50px;
+box-shadow:0 0 25px #60A5FA;
+}
+
+.about{
+margin-top:60px;
+}
+
+.about h2{
+font-size:60px;
+color:#60A5FA;
+margin-bottom:30px;
+}
+
+.about p{
+font-size:28px;
+line-height:1.8;
+color:#f0f0f0;
+}
+
+.buttons{
+display:flex;
+gap:25px;
+flex-wrap:wrap;
+margin-top:40px;
+}
+
+button{
+background:#60A5FA;
+border:none;
+padding:20px 40px;
+border-radius:20px;
+color:white;
+font-size:28px;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+.contact-box{
+display:none;
+margin-top:40px;
+background:#60A5FA;
+padding:35px;
+border-radius:30px;
+box-shadow:0 0 20px rgba(0,0,0,0.4);
+}
+
+.contact-box h3{
+font-size:45px;
+margin-bottom:25px;
+}
+
+.contact-box p{
+font-size:28px;
+line-height:2;
+}
+
+.table-box{
+display:none;
+margin-top:40px;
+background:#60A5FA;
+padding:35px;
+border-radius:30px;
+box-shadow:0 0 20px #1E293B;
+}
+
+.table-box h3{
+font-size:45px;
+margin-bottom:30px;
+color:#1E293B;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+td{
+border:2px solid #1E293B;
+padding:20px;
+font-size:26px;
+}
+
+td:first-child{
+font-weight:bold;
+color:#1E293B;
+}
+
+footer{
+text-align:center;
+margin-top:70px;
+color:#d0d0d0;
+font-size:20px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:55px;
+}
+
+.hero p{
+font-size:22px;
+}
+
+.about h2{
+font-size:45px;
+}
+
+.about p,
+.contact-box p,
+td{
+font-size:22px;
+}
+
+button{
+width:100%;
+font-size:24px;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="hero">
+
+<h1>
+Nikola<br>Ostojić
+</h1>
+
+<p>
+Future Mr. Olympia
+</p>
+
+<!-- STAVI OVDE SVOJU SLIKU --> 
+<img src="slika1.jpeg" class="profile-img">
+
+</div>
+
+<div class="about">
+
+<h2>O meni</h2>
+
+<p>
+Zovem se Nikola Ostojić, imam 17 godina i učenik sam gimnazije.
+Veliki sam ljubitelj automobila, video-igara i tehnologije.
+</p>
+
+<div class="buttons">
+
+<button onclick="showContact()">
+Kontakt
+</button>
+
+<button onclick="showTraits()">
+Moje osobine
+</button>
+
+</div>
+
+<!-- KONTAKT -->
+
+<div class="contact-box" id="contact">
+
+<h3>Kontakt informacije</h3>
+
+<p>📧 Email: ostojicnikola653@gmail.com</p>
+<p>📱 Telefon: +381 64 865 0546</p>
+<p>📍   Arilje, Srbija</p>
+<p>📸 Instagram: @ostojiicnikola</p>
+
+</div>
+
+<!-- TABELA -->
+
+<div class="table-box" id="traits">
+
+<h3>Moje osobine</h3>
+
+<table>
+
+<tr>
+<td>Visina</td>
+<td>186 cm</td>
+</tr>
+
+
+
+
+
+<tr>
+<td>Prednost</td>
+<td>Kovrdžava kosa</td>
+</tr>
+
+<tr>
+<td>Bench Press PR</td>
+<td>105 kg</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+<footer>
+© 2026 Nikola Ostojić | All Rights Reserved
+</footer>
+
+</div>
+
+<script>
+
+function showContact(){
+
+let contact = document.getElementById("contact");
+
+if(contact.style.display === "block"){
+contact.style.display = "none";
+}else{
+contact.style.display = "block";
+}
+}
+
+function showTraits(){
+
+let traits = document.getElementById("traits");
+
+if(traits.style.display === "block"){
+traits.style.display = "none";
+}else{
+traits.style.display = "block";
+}
+}
+
+</script>
+
+</body>
+</html>
